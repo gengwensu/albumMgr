@@ -1,19 +1,23 @@
-# musicAlbum
-RESTful API to manage a music Album
+# albumMgr
+RESTful API to manage a musical Album
 
-musicAlbum reads in catalog XML files into memory and provide RESTful API's to search the catalog by artist, song title, and album id. All output will be in JSON.
+albumMgr reads in catalog XML files into memory and provide RESTful API's to search the catalog by artist, song title, and album id. All output will be in JSON.
 
 # API
 
-1. GET  /musicalbum
+1. GET  /albummgr
   
-    returns "Music Album management service"
+    returns "Musical Album management service"
     
-2. GET  /musicalbum/artist
+2. GET  /albummgr/album
 
-    returns all artists sorted alphabetically
+    returns all album sorted by album id
     
-3. GET  /musicalbum/artist?name="Taylor Swift"
+3. GET  /albummgr/album?artist="Taylor Swift"&title="Look What You Made Me Do"
 
-    returns all albums authored by the artist
+    returns albums the search criteria
+    
+4. GET  /albummgr/{$albumId}
+
+    returns the album with the albumId
     
