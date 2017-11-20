@@ -83,3 +83,9 @@ $ go build ../src/github.com/gengwensu/albumMgr/albumMgr.go
 
 $./albumMgr.exe &
 
+# Dockerize
+copy input xml files to the shared folder
+$ docker build -t albummgr .
+$ docker run -d -p 8081:8081 -v `pwd`:`pwd` albummgr &
+
+
