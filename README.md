@@ -41,9 +41,9 @@ results: [
 ]                                                                                  
 ```
     
-3. GET  /albummgr/album?artist="Taylor Swift"&title="Look What You Made Me Do"
+3. GET  /albummgr/album?artist="Kenny%20Chesney"\&title="Live%20a%20Little"
 
-    returns albums the search criteria
+    returns albums that meet the search criteria
 
      Example: 
 
