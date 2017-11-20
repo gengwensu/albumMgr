@@ -81,11 +81,20 @@ The service should respond with 404 to all other requests not listed above
   
 $ go build ../src/github.com/gengwensu/albumMgr/albumMgr.go 
 
-$./albumMgr.exe &
+$./albumMgr.exe -dir="./" &
+
+```
+Usage of D:\CUST\workspace\go-project\bin\albumMgr.exe:
+  -dir string
+        directory path for input XML files (default "./")
+```
 
 # Dockerize
+
 copy input xml files to the shared folder
+
+```
 $ docker build -t albummgr .
 $ docker run -d -p 8081:8081 -v `pwd`:`pwd` albummgr &
-
+```
 
