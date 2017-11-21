@@ -1,10 +1,14 @@
 
-FROM golang:1.8
+FROM golang:1.8-alpine
 
-WORKDIR /go/src/app
-COPY . .
+RUN mkdir -p /go/src/github.com/gengwensu/albumMgr
 
-RUN go-wrapper download   # "go get -d -v ./..."
-RUN go-wrapper install    # "go install -v ./..."
+ADD . /go/src/github.com/gengwensu/albumMgr
 
-CMD ["go-wrapper", "run"] # ["app"]
+WORKDIR /go/src/github.com/gengwensu/albumMgr
+
+RUN go install github.com/gengwensu/albumMgr
+
+ENTRYPOINT /go/bin/albumMgr
+
+EXPOSE 8081
