@@ -8,6 +8,7 @@ ADD . /go/src/github.com/gengwensu/albumMgr
 WORKDIR /go/src/github.com/gengwensu/albumMgr
 
 RUN go install github.com/gengwensu/albumMgr
+# RUN apk add --no-cache curl
 
 ENTRYPOINT /go/bin/albumMgr
 

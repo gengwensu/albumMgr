@@ -83,7 +83,7 @@ func main() {
 		album.Title = t.Title
 		ds.AlbumCollection = append(ds.AlbumCollection, album)
 	}
-	log.Fatal(http.ListenAndServe("localhost:8081", ds))
+	log.Fatal(http.ListenAndServe("0.0.0.0:8081", ds))
 
 }
 

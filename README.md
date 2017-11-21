@@ -95,6 +95,7 @@ copy input xml files to the shared folder
 
 ```
 $ docker build -t albummgr .
-$ docker run -d -p 8081:8081 -v `pwd`:`pwd` albummgr &
+
+$ docker run --rm -d -p 8081:8081 --name album_mgr albummgr
 ```
 
